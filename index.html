@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="assets/money-bag.png" />
+    <title>Sangu Track</title>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- SCRIPT  -->
+  </head>
+  <body>
+    <nav class="navbar bg-light opacity-75 shadow sticky-top">
+      <div class="container justify-content-center">
+        <a class="navbar-brand text-center mx-3 text-dark fs-6" href="#">Input Data</a>
+        <a class="navbar-brand text-center mx-3 text-dark fs-6" href="#list-data">List Data</a>
+      </div>
+    </nav>
+    <div class="container d-flex align-items-center justify-content-center min-vh-100">
+      <div class="row justify-content-center">
+        <div class="box-register col-12 col-md-9 p-4">
+          <h3 class="title-register text-center fs-3 text-light fw-bold mt-3 mb-4">Input Data</h3>
+          <form action="" id="form" autocomplete="off">
+            <div class="mb-3 mb-md-4">
+              <label for="nama" class="form-label ms-2 text-light">Nama</label>
+              <input type="text" id="nama" class="nama form-control py-2" placeholder="*Minimal 10 Karakter" />
+              <span class="text-danger ms-1 pt-2" id="nama-error"></span>
+            </div>
+            <div class="row">
+              <div class="mb-md-1 mb-4 col-5 col-md-4">
+                <label for="usia" class="form-label ms-2 text-light">Usia</label>
+                <input type="number" id="usia" min="1" class="usia form-control text-center" placeholder="*24" />
+              </div>
+              <div class="mb-md-1 mb-1 col-12 col-md-8">
+                <label for="uang-sangu" class="form-label ms-2 text-center text-light">Uang Sangu (Rp)</label>
+                <input type="number" id="uang-sangu" class="uang-sangu form-control" placeholder="*Rp 100.000 - 1.000.000" />
+              </div>
+            </div>
+            <div class="text-danger ms-1 mt-2" id="usia-error"></div>
+            <div class="text-danger ms-1" id="uang-error"></div>
+            <div class="text-success text-center fw-semibold fs-5" id="input-sukses"></div>
+            <div class="col-12 mt-4 mb-4">
+              <button id="submit" class="submit text-dark px-4 py-2 rounded-3 fw-semibold">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="container d-flex min-vh-100 justify-content-center align-items-center">
+      <div class="col-10 col-md-12">
+        <div class="tab-pane" id="list-data">
+          <table class="table bg-dark-subtle table-hover table-bordered table-striped text-center">
+            <thead class="bg-light">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nama</th>
+                <th scope="col">Usia</th>
+                <th scope="col">Uang Sangu (Rp)</th>
+              </tr>
+            </thead>
+            <tbody id="table-data"></tbody>
+          </table>
+
+          <span id="resume" class="text-warning ms-1 fs-6"></span>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
